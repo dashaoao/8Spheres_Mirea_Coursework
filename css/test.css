@@ -1,0 +1,395 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  main{
+    background-color: black;
+  }
+
+  h1{
+    padding-top: 1em;
+    padding-bottom: 1em;
+    font-family: 'GoogleSans-Regular';
+    font-size: 33px;
+    font-weight: normal;
+    color: #ffffff;
+    text-align: center;
+  }
+
+  .cards{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+    align-items: center;
+    grid-gap: 2em;
+    margin-left: 3em;
+    margin-right: 3em;
+    margin-bottom: 4em;
+  }
+
+  .cards > #card{
+    justify-self: center;
+    width: 300px;
+    height: 210px;
+    background-color: #383737;
+    border-radius: 20px;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 5px;
+    justify-content: center;
+    align-items: center;
+    box-shadow: inset -10px -10px 15px 3px #1111115b; 
+    transition: all 0.5s;
+  }
+
+  .cards > #card p{
+    justify-self: center;
+    align-self: center;
+    text-align: center;
+    font-family: 'GoogleSans-Regular';
+    color: #ffffff;
+    font-size: 24px;
+  }
+
+  .cards > #card img{
+    justify-self: center;
+    width: auto;
+    height: 75px;
+    margin-bottom: 1em;
+  }
+  .cards .card2 img{
+    height: 80px;
+  }
+
+  .row-border-cards{
+    border-top: 4px solid rgba(128, 128, 128, 0.874);
+    grid-column: 1 / 4;
+    width: 55%;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+
+  /* Вопросы */
+
+  .quest{
+    padding-bottom: 1em;
+  }
+
+  #questions{
+    display: flex;
+    width: auto;
+    justify-content: center;
+    align-items: center;
+    margin-right: 0.5em;
+    margin-left: 0.5em;
+    margin-bottom: 1em;
+    margin-top: 1em;
+  }
+
+  .question{
+    font-family: 'GoogleSans-Regular';
+    font-size: 25px;
+    color: #ffffff;
+    text-align: center;
+    margin-right: 1em;
+    margin-left: 1em;
+  }
+
+  .agree{
+    font-family: 'GoogleSans-Regular';
+    font-size: 16px;
+    color: #ffffff;
+  }
+
+  .ans{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    width: 400px;
+    height: auto;
+    transition: all 0.5s;
+  }
+
+  .check{
+    justify-self: center;
+    align-self: center;
+  }
+  .check>input {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+  }
+  .check>span {
+    display: inline-flex;
+    align-items: center;
+    user-select: none;
+  }
+  .check>span::before {
+    content: '';
+    width: 35px;
+    height: 35px;
+    border-radius: 11px;
+    border: 4px solid;
+    background-color: black;
+    justify-self: center;
+    align-self: center;
+    transition: all 0.5s;
+  }
+  .check>input:checked+#child1::before, .check>input:checked+#child5::before {
+    background-color: #eecd1e;
+  }
+  .check>input:checked+#child2::before, .check>input:checked+#child4::before {
+    background-color: #e8cf49;
+  }
+  .check>input:checked+#child3::before{
+    background-color: #e9e0b3;
+  }
+  #child1::before, #child5::before{
+    border-color: #eecd1e;
+  }
+  #child2::before, #child4::before{
+    border-color: #e8cf49;
+  }
+  #child3::before{
+    border-color: #e9e0b3;
+  }
+
+
+  .btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 2em;
+  }
+
+  .next{
+    justify-self: center;
+    align-self: center;
+    width: 300px;
+    height: 50px;
+    border-radius: 30px;
+    font-family: 'GoogleSans-Medium';
+    font-size: 25px;
+    border: solid 3px #eec81e;
+    background-color: #eecd1e;
+    cursor:pointer;
+    transition: all 0.5s;
+  }
+  .next:hover{
+    background-color: #eec81e;
+  }
+
+
+
+  /* Media */
+
+  @media(min-width: 1350px){
+    h1{
+      font-size: 40px;
+    }
+    .cards > #card{
+      width: 400px;
+      height: 280px;
+      border-radius: 24px;
+      gap: 5px;
+      box-shadow: inset -13px -13px 12px 3px #1111115b; 
+    }
+    .cards > #card p{
+      font-size: 32px;
+    }
+    .cards > #card img{
+      height: 100px;
+    }
+    .cards .card2 img{
+      height: 100px;
+    }
+  }
+
+  @media(max-width: 1050px){
+    .cards > #card{
+      width: 250px;
+      height: 175px;
+      border-radius: 15px;
+      gap: 5px;
+      box-shadow: inset -8px -8px 12px 3px #1111115b; 
+    }
+    .cards > #card p{
+      font-size: 20px;
+    }
+    .cards > #card img{
+      height: 65px;
+    }
+    .cards .card2 img{
+      height: 60px;
+    }
+    /* Вопросы */
+    .ans{
+      width: 370px;
+    }
+  }
+
+  @media(max-width: 900px){
+    .cards > #card{
+      width: 200px;
+      height: 140px;
+      border-radius: 12px;
+      gap: 5px;
+      box-shadow: inset -10px -10px 15px 3px #1111115b; 
+    }
+    .cards > #card p{
+      font-size: 16px;
+    }
+    .cards > #card img{
+      height: 55px;
+    }
+    /* Вопросы */
+    .check>span::before {
+      width: 33px;
+      height: 33px;
+      border-radius: 10px;
+    }
+  }
+
+  @media(max-width: 730px){
+    .cards > #card{
+      width: 170px;
+      height: 119px;
+      border-radius: 10px;
+      gap: 5px;
+      box-shadow: inset -10px -10px 15px 3px #1111115b; 
+    }
+    .cards > #card p{
+      font-size: 14px;
+    }
+    .cards > #card img{
+      height: 47px;
+    }
+    /* Вопросы */
+    .ans{
+      width: 310px;
+    }
+    .check>span::before {
+      width: 30px;
+      height: 30px;
+      border-radius: 9px;
+    }
+    .question{
+      font-size: 22px;
+    }
+  }
+
+  @media(max-width: 600px){
+    .cards{
+      grid-gap: 1em;
+      margin-left: 2em;
+      margin-right: 2em;
+      margin-bottom: 2em;
+    }
+    .cards > #card{
+      width: 145px;
+      height: 101px;
+      border-radius: 8px;
+      gap: 5px;
+      box-shadow: inset -10px -10px 15px 3px #1111115b; 
+    }
+    .cards > #card p{
+      font-size: 12px;
+    }
+    .cards > #card img{
+      height: 40px;
+    }
+    /* Вопросы */
+    .ans{
+      width: 280px;
+    }
+    .agree{
+      font-size: 14px;
+    }
+  }
+
+  @media(max-width: 500px){
+    .cards{
+      grid-gap: 1em;
+      margin-left: 2em;
+      margin-right: 2em;
+      margin-bottom: 2em;
+    }
+    .cards > #card{
+      width: 116px;
+      height: 80px;
+      border-radius: 6.5px;
+      gap: 5px;
+      box-shadow: inset -10px -10px 15px 3px #1111115b; 
+    }
+    .cards > #card p{
+      font-size: 10px;
+    }
+    .cards > #card img{
+      height: 32px;
+    }
+    /* Вопросы */
+    .ans{
+      width: 220px;
+    }
+    .question{
+      font-size: 20px;
+    }
+    .next{
+      width: 270px;
+      height: 44px;
+      border-radius: 26px;
+      font-size: 22px;
+    }
+  }
+
+    @media(max-width: 400px){
+    .cards{
+      grid-template-columns: 1fr;
+      grid-gap: 2em;
+      margin-left: 3em;
+      margin-right: 3em;
+      margin-bottom: 2em;
+    }
+    .cards > #card{
+      width: 230px;
+      height: 160px;
+      border-radius: 12px;
+      gap: 5px;
+      box-shadow: inset -10px -10px 15px 3px #1111115b; 
+    }
+    .cards > #card p{
+      font-size: 18px;
+    }
+    .cards > #card img{
+      height: 63px;
+    }
+    .row-border-cards{
+      grid-column: 1;
+    }
+    /* Вопросы */
+    .ans{
+      width: 180px;
+    }
+    .agree{
+      font-size: 11px;
+      text-align: center;
+    }
+    .check>span::before {
+      width: 26px;
+      height: 26px;
+      border-radius: 7px;
+      border: 3px solid;
+    }
+    .question{
+      font-size: 18px;
+    }
+    .next{
+      width: 250px;
+      height: 42px;
+      border-radius: 24px;
+      font-size: 22px;
+    }
+  }

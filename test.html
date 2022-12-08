@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Spheres of life </title>
+  <link rel="icon" rel="stylesheet" type="image/svg" href="img/favicon.svg">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=PT+Sans&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/fonts.css">
+  <link rel="stylesheet" href="css/head.css">
+  <link rel="stylesheet" href="css/foot.css">
+  <link rel="stylesheet" href="css/test.css">
+
+</head>
+
+<body>
+  <header>
+    <div id="logo" class="headerElements">
+    <img src="img/logo.png" alt="Hello">
+    </div>
+    <section class="top-nav">
+        <input id="menu-toggle" type="checkbox" />
+        <label class='menu-button-container' for="menu-toggle">
+        <div class='menu-button'></div>
+        </label>
+        <ul class="menu">
+          <li class="highlighted"><a href="test.html">Тест личности</a></li>
+          <li><a href="index.html">Главная</a></li>
+          <li><a href="gallery_sph.html">Все сферы</a></li>
+        </ul>
+    </section>
+  </header>
+
+    <main>
+
+        <h1>Тест личности<br>Баланс Жизни</h1>
+        <div class="cards">
+            <div id="card" class="card1">
+                <p>Тест занимает<br>не более 10 минут</p>
+                <img src="img/clock.png" width="30" height="auto">
+            </div>
+            <div id="card" class="card2">
+                <p>Приятного<br>прохождения</p>
+                <img src="img/handshake.png" width="30" height="auto">
+            </div>
+            <div id="card" class="card3">
+                <p>Отвечайте<br>честно</p>
+                <img src="img/moon.png" width="30" height="auto">
+            </div>
+            <div class="row-border-cards"></div>
+        </div>
+
+        <div class="quest" id="quest1">
+            <p class="question" id="q1">1.  Вас редко одолевают негативные эмоции?</p>
+            <div id="questions">
+              <p class="agree">Согласен</p>
+              <div class="ans">
+                <label class="check">
+                  <input type="radio" name="color1" value="5">
+                  <span id="child1"></span>
+                </label>
+                <label class="check">
+                  <input type="radio" name="color1" value="3.75">
+                  <span id="child2"></span>
+                </label>
+                <label class="check">
+                  <input type="radio" name="color1" value="2.5">
+                  <span id="child3"></span>
+                </label>
+                <label class="check">
+                  <input type="radio" name="color1" value="1.25">
+                  <span id="child4"></span>
+                </label>
+                <label class="check">
+                  <input type="radio" name="color1" value="0">
+                  <span id="child5"></span>
+                </label>
+              </div>
+              <p class="agree">Не согласен</p>
+          </div>
+        </div>
+
+        <div class="quest" id="quest2">
+          <p class="question" id="q2">2.  Можете ли вы сказать, что находитесь в гармонии с собой?</p>
+          <div id="questions">
+            <p class="agree">Согласен</p>
+            <div class="ans">
+              <label class="check">
+                <input type="radio" name="color2" value="5">
+                <span id="child1"></span>
+              </label>
+              <label class="check">
+                <input type="radio" name="color2" value="3.75">
+                <span id="child2"></span>
+              </label>
+              <label class="check">
+                <input type="radio" name="color2" value="2.5">
+                <span id="child3"></span>
+              </label>
+              <label class="check">
+                <input type="radio" name="color2" value="1.25">
+                <span id="child4"></span>
+              </label>
+              <label class="check">
+                <input type="radio" name="color2" value="0">
+                <span id="child5"></span>
+              </label>
+            </div>
+            <p class="agree">Не согласен</p>
+          </div>
+        </div> 
+
+        <div class="quest" id="quest3">
+          <p class="question" id="q3">3.  Мысли о будущем не вызывают у вас негативные эмоции?</p>
+          <div id="questions">
+            <p class="agree">Согласен</p>
+            <div class="ans">
+              <label class="check">
+                <input type="radio" name="color3" value="5">
+                <span id="child1"></span>
+              </label>
+              <label class="check">
+                <input type="radio" name="color3" value="3.75">
+                <span id="child2"></span>
+              </label>
+              <label class="check">
+                <input type="radio" name="color3" value="2.5">
+                <span id="child3"></span>
+              </label>
+              <label class="check">
+                <input type="radio" name="color3" value="1.25">
+                <span id="child4"></span>
+              </label>
+              <label class="check">
+                <input type="radio" name="color3" value="0">
+                <span id="child5"></span>
+              </label>
+            </div>
+            <p class="agree">Не согласен</p>
+          </div>
+        </div> 
+
+        <div class="quest" id="quest4">
+          <p class="question"  id="q4">4.  Вы часто уделяете время медитации, творчеству, духовным тренингам?</p>
+          <div id="questions">
+            <p class="agree">Согласен</p>
+              <div class="ans">
+                <label class="check">
+                  <input type="radio" name="color4" value="5">
+                  <span id="child1"></span>
+                </label>
+                <label class="check">
+                  <input type="radio" name="color4" value="3.75">
+                  <span id="child2"></span>
+                </label>
+                <label class="check">
+                  <input type="radio" name="color4" value="2.5">
+                  <span id="child3"></span>
+                </label>
+                <label class="check">
+                  <input type="radio" name="color4" value="1.25">
+                  <span id="child4"></span>
+                </label>
+                <label class="check">
+                  <input type="radio" name="color4" value="0">
+                  <span id="child5"></span>
+                </label>
+              </div>
+            <p class="agree">Не согласен</p>
+          </div>
+        </div>        
+
+        <div class="btn">
+          <button class="next" onclick="next()">Следующая страница</button>
+        </div>
+      <script src="js/test.js"></script>
+    </main>
+
+    <footer>
+      <div class="footer">
+        <div class="logo2">
+          <img src="img/logolast.png" alt="Hello">
+        </div>
+
+        <div class="middle">
+          <a href="https://vk.com/idarya228" class="icon"><img src="img/inst.svg" alt=""></a>
+          <a href="https://vk.com/idarya228" class="icon"><img src="img/vk.svg" alt=""></a>
+          <a href="https://vk.com/idarya228" class="icon"><img src="img/twitter.svg" alt=""></a>
+          <a href="https://vk.com/idarya228" class="icon"><img src="img/facebook.svg" alt=""></a>
+          <a href="https://www.youtube.com/watch?v=5Pl3RnYryzI&list=PLIjqXVLsr53HodrvapY1KAyYPzcjiMadD" class="icon"><img src="img/youtube.svg" alt=""></a>
+        </div>
+
+        <div class="agreement">
+          <a href="#">Согласие на обработку<br>персональных данных</a>
+          <br>
+          <a href="#">Политика конфиденциальности</a>
+        </div>
+
+        <div class="row-border"></div>
+
+        <div class="disclaimer">
+          <p>Disclaimer: All non-English versions of the website contain automated translations or translations submitted by our users.</p>
+        </div>
+
+        <div class="signature">
+          <p>© 2015-2022 8SPHERES OF LIFE. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+</body>
+</html>

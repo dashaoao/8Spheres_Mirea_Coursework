@@ -1,0 +1,31 @@
+@import url('https://fonts.soogleapis.com/css?family=Playfair+Display|Source+Sans+Pro:200,400');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=PT+Sans&display=swap');
+
+  @font-face {
+    font-family: "GoogleSans-Bold";
+    src: url('../fonts/GoogleSans-Bold.ttf'),
+
+    url("font/GoogleSans-Bold.woff2") format("woff2"),
+
+    url("font/GoogleSans-Bold.woff") format("woff");
+  }
+
+  @font-face {
+    font-family: "GoogleSans-Regular";
+
+    src: url('../fonts/GoogleSans-Regular.ttf'),
+
+    url("font/GoogleSans-Regular.woff2") format("woff2"),
+
+    url("font/GoogleSans-Regular.woff") format("woff");
+  }
+
+  @font-face {
+    font-family: "GoogleSans-Medium";
+
+    src: url('../fonts/GoogleSans-Medium.ttf'),
+
+    url("font/GoogleSans-Medium.woff2") format("woff2"),
+
+    url("font/GoogleSans-Medium.woff") format("woff");
+  }

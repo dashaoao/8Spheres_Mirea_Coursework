@@ -1,0 +1,196 @@
+    header{
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    }
+    
+    .top-nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    color: #FFF;
+    height: 70px;
+    padding: 0;
+    background-color: #090D0D;
+    z-index: 100;
+    }
+    
+    .headerElements {
+    height: auto;
+    vertical-align: middle;
+    display: inline-block;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 2;
+    }
+    
+    #logo img{
+    max-width: 200px;
+    max-height: 50px;
+    }  
+  
+    .menu {
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    }
+  
+    .menu > li {
+    margin: 0 1rem;
+    overflow: hidden;
+    font-family: 'GoogleSans-Medium';
+    font-size: 17px;
+    }
+  
+    .menu > li > a {
+    align-items: center;
+    color: #ffffff;
+    display: inline-flex;
+    height: 70px;
+    text-decoration: none;
+    white-space: nowrap;
+    }
+  
+    .menu > li:before {
+    content: "";
+    position: relative;
+    top: 2px;
+    transition: opacity .2s ease-in-out .1s;
+    width: 100%;
+    display: block;
+    height: 4px;
+    background-color: #090D0D;
+    border-radius: 10px;
+    }
+  
+    .menu > li.highlighted:before {
+    background-color: #F4E700;
+    }
+    .menu > li:not(.highlighted):hover:before {
+      background-color: #F4E700;
+      transition: 0.7s;
+    }
+    .menu > li:not(.highlighted):hover > a {
+      color: #FFF;
+    }
+  
+    .menu > li:not(.highlighted) > a {
+      font-family: 'GoogleSans-Regular';
+      color: rgb(214, 212, 212);
+    }
+  
+    .menu-button-container {
+    display: none;
+    height: 100%;
+    width: 30px;
+    cursor: pointer;
+    flex-direction: column;
+    justify-content: center;
+    align-items: end;
+    }
+  
+    #menu-toggle {
+    display: none;
+    }
+  
+    .menu-button,
+    .menu-button::before,
+    .menu-button::after {
+    display: block;
+    background-color: #fff;
+    position: absolute;
+    height: 4px;
+    width: 30px;
+    transition: transform 400ms cubic-bezier(0.23, 1, 0.32, 1);
+    border-radius: 2px;
+    }
+  
+    .menu-button::before {
+    content: '';
+    margin-top: -8px;
+    }
+  
+    .menu-button::after {
+    content: '';
+    margin-top: 8px;
+    }
+  
+    #menu-toggle:checked + .menu-button-container .menu-button::before {
+    margin-top: 0px;
+    transform: rotate(45deg);
+    }
+  
+    #menu-toggle:checked + .menu-button-container .menu-button {
+    background: rgba(255, 255, 255, 0);
+    }
+  
+    #menu-toggle:checked + .menu-button-container .menu-button::after {
+    margin-top: 0px;
+    transform: rotate(-45deg);
+    }
+    
+    @media (max-width: 850px) {
+        .top-nav{
+          justify-content: end;
+        }
+        .menu-button-container {
+            display: flex;
+            margin-right: 1em;
+        }
+        .menu {
+            position: absolute;
+            top: 0;
+            margin-top: 70px;
+            left: 0;
+            flex-direction: column;
+            width: 100%;
+            justify-content: center;
+            align-items: center;
+            background-color: #090D0D;
+        }
+        #menu-toggle ~ .menu li {
+            height: 0;
+            margin: 0;
+            padding: 0;
+            border: 0;
+            transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+        }
+        #menu-toggle:checked ~ .menu li {
+            
+            height: 2.5em;
+            padding: 0.5em;
+            transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+        }
+        .menu > li {
+            display: flex;
+            justify-content: center;
+            margin: 0;
+            padding: 0.5em 0;
+            width: 100%;
+            color: white;
+            background-color: rgb(0, 0, 0);
+        }
+        .menu > li:not(:last-child) {
+            border-bottom: 2px solid #444;
+        }
+        .menu > li:before {
+          width: 0;
+          height: 0;
+        }
+        .menu > li > a {
+          height: auto;
+        }
+        .menu > li.highlighted > a {
+        color: #F4E700;
+        font-size: 19px;
+        }
+        .menu > li:not(.highlighted) > a:hover{
+          font-size: 18px;
+          color: #fff;
+        }
+    }
